@@ -1,3 +1,9 @@
-.App {
-  border: 1px solid red;
+.app {
+  padding: 8px;
+  font-size: 16px;
+}
+
+.border {
+  padding: 10px;
+  border: 1px red solid;
 }

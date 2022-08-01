@@ -7,5 +7,11 @@ export default function BrowserRouter({ children }) {
     historyRef.current = createBrowserHistory();
   }
   const history = historyRef.current;
-  return <Router children={children} navigator={history} />;
+  const [state, setState] = React.useState({ location: history.location });
+  React.useLayoutEffect(() => {
+    history.listen(setState);
+  }, [history]);
+  return (
+    <Router children={children} navigator={history} location={state.location} />
+  );
 }
