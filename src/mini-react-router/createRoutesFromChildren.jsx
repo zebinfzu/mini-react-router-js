@@ -6,6 +6,9 @@ export default function createRoutesFromChildren(children) {
       path: child.props.path,
       element: child.props.element,
     };
+    if (child.props.children) {
+      route.children = createRoutesFromChildren(child.props.children);
+    }
     routes.push(route);
   });
   return routes;
