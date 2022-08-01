@@ -1,3 +1,3 @@
 # mini-react-router-js
 
-This repository implements a simple react-router.
+This repository contains a simple react-router.
